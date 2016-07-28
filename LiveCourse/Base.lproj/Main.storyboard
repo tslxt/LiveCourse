@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1808" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -18,20 +17,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="initial.png" translatesAutoresizingMaskIntoConstraints="NO" id="f8P-HK-jfF">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="init_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="f8P-HK-jfF">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="-33" width="375" height="700"/>
+                                    <rect key="frame" x="20" y="-53" width="383" height="700"/>
                                 </variation>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1qn-n3-JRu">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="start button.png"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="200" y="574" width="155" height="22"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="Jhj-94-4KD" kind="presentation" modalTransitionStyle="coverVertical" id="DeT-b2-4Ah"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="1qn-n3-JRu" secondAttribute="trailing" id="Cuw-O9-0St">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
                             <constraint firstAttribute="trailingMargin" secondItem="f8P-HK-jfF" secondAttribute="trailing" id="SBR-iY-qWp">
                                 <variation key="heightClass=regular-widthClass=compact" constant="-20"/>
                             </constraint>
                             <constraint firstItem="f8P-HK-jfF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="Udl-pL-bf4">
                                 <variation key="heightClass=regular-widthClass=compact" constant="-33"/>
+                            </constraint>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1qn-n3-JRu" secondAttribute="bottom" constant="60" id="VlZ-18-BBs">
+                                <variation key="heightClass=regular-widthClass=compact" constant="40"/>
                             </constraint>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="f8P-HK-jfF" secondAttribute="bottom" id="ccB-ta-a0D"/>
                             <constraint firstItem="f8P-HK-jfF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="n5a-pV-2Hr">
@@ -41,22 +56,28 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="f8P-HK-jfF"/>
+                                <exclude reference="1qn-n3-JRu"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="SBR-iY-qWp"/>
                                 <exclude reference="Udl-pL-bf4"/>
                                 <exclude reference="n5a-pV-2Hr"/>
+                                <exclude reference="Cuw-O9-0St"/>
+                                <exclude reference="VlZ-18-BBs"/>
                                 <exclude reference="ccB-ta-a0D"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="f8P-HK-jfF"/>
+                                <include reference="1qn-n3-JRu"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="SBR-iY-qWp"/>
                                 <include reference="Udl-pL-bf4"/>
                                 <include reference="n5a-pV-2Hr"/>
+                                <include reference="Cuw-O9-0St"/>
+                                <include reference="VlZ-18-BBs"/>
                                 <include reference="ccB-ta-a0D"/>
                             </mask>
                         </variation>
@@ -71,8 +92,32 @@
             </objects>
             <point key="canvasLocation" x="465.75" y="418.875"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Ow0-6d-Pve">
+            <objects>
+                <viewController id="Jhj-94-4KD" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wZX-of-qQb"/>
+                        <viewControllerLayoutGuide type="bottom" id="SiO-pq-dSn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ltm-rL-ARx">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zI0-1z-Ele"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ce0-yG-b3L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1193.25" y="418.875"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="initial.png" width="375" height="667"/>
+        <image name="init_bg.png" width="375" height="667"/>
+        <image name="start button.png" width="155" height="22"/>
     </resources>
 </document>
