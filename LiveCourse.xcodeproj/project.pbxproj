@@ -13,9 +13,9 @@
 		A56A4F5F1D4906FC00A50483 /* LiveCourse.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A56A4F5D1D4906FC00A50483 /* LiveCourse.xcdatamodeld */; };
 		A56A4F611D4906FC00A50483 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A56A4F601D4906FC00A50483 /* Assets.xcassets */; };
 		A56A4F641D4906FC00A50483 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A56A4F621D4906FC00A50483 /* LaunchScreen.storyboard */; };
-		FF11FCE11D490DC100D70316 /* initial@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = FF11FCDE1D490DC100D70316 /* initial@1x.png */; };
-		FF11FCE21D490DC100D70316 /* initial@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FF11FCDF1D490DC100D70316 /* initial@2x.png */; };
-		FF11FCE31D490DC100D70316 /* start page@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FF11FCE01D490DC100D70316 /* start page@2x.png */; };
+		FF11FCEE1D4A528D00D70316 /* initial@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = FF11FCEB1D4A528D00D70316 /* initial@1x.png */; };
+		FF11FCEF1D4A528D00D70316 /* initial@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FF11FCEC1D4A528D00D70316 /* initial@2x.png */; };
+		FF11FCF01D4A528D00D70316 /* start page@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FF11FCED1D4A528D00D70316 /* start page@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +27,9 @@
 		A56A4F601D4906FC00A50483 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A56A4F631D4906FC00A50483 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A56A4F651D4906FC00A50483 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FF11FCDE1D490DC100D70316 /* initial@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "initial@1x.png"; sourceTree = "<group>"; };
-		FF11FCDF1D490DC100D70316 /* initial@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "initial@2x.png"; sourceTree = "<group>"; };
-		FF11FCE01D490DC100D70316 /* start page@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "start page@2x.png"; sourceTree = "<group>"; };
+		FF11FCEB1D4A528D00D70316 /* initial@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "initial@1x.png"; sourceTree = "<group>"; };
+		FF11FCEC1D4A528D00D70316 /* initial@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "initial@2x.png"; sourceTree = "<group>"; };
+		FF11FCED1D4A528D00D70316 /* start page@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "start page@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +77,9 @@
 		FF11FCE41D490DCB00D70316 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				FF11FCE01D490DC100D70316 /* start page@2x.png */,
-				FF11FCDE1D490DC100D70316 /* initial@1x.png */,
-				FF11FCDF1D490DC100D70316 /* initial@2x.png */,
+				FF11FCEB1D4A528D00D70316 /* initial@1x.png */,
+				FF11FCEC1D4A528D00D70316 /* initial@2x.png */,
+				FF11FCED1D4A528D00D70316 /* start page@2x.png */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -142,12 +142,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF11FCE11D490DC100D70316 /* initial@1x.png in Resources */,
+				FF11FCEE1D4A528D00D70316 /* initial@1x.png in Resources */,
 				A56A4F641D4906FC00A50483 /* LaunchScreen.storyboard in Resources */,
 				A56A4F611D4906FC00A50483 /* Assets.xcassets in Resources */,
 				A56A4F5C1D4906FC00A50483 /* Main.storyboard in Resources */,
-				FF11FCE21D490DC100D70316 /* initial@2x.png in Resources */,
-				FF11FCE31D490DC100D70316 /* start page@2x.png in Resources */,
+				FF11FCEF1D4A528D00D70316 /* initial@2x.png in Resources */,
+				FF11FCF01D4A528D00D70316 /* start page@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +272,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LiveCourse/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fangtian.me.LiveCourse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -283,6 +284,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LiveCourse/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fangtian.me.LiveCourse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
