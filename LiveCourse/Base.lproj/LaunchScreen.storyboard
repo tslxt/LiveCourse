@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -19,20 +20,44 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="start page.png" translatesAutoresizingMaskIntoConstraints="NO" id="lXv-Sa-CyA">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="0.0" y="-33" width="375" height="700"/>
                                 </variation>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lXv-Sa-CyA" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" id="6qx-q3-sPb">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-33"/>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="lXv-Sa-CyA" secondAttribute="trailing" id="7eL-Z0-fTf">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-20"/>
+                            </constraint>
+                            <constraint firstItem="lXv-Sa-CyA" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="VLF-nc-7fX">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-20"/>
+                            </constraint>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="lXv-Sa-CyA" secondAttribute="bottom" id="tEO-nW-4j6"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="lXv-Sa-CyA"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="6qx-q3-sPb"/>
+                                <exclude reference="7eL-Z0-fTf"/>
+                                <exclude reference="VLF-nc-7fX"/>
+                                <exclude reference="tEO-nW-4j6"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="lXv-Sa-CyA"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="6qx-q3-sPb"/>
+                                <include reference="7eL-Z0-fTf"/>
+                                <include reference="VLF-nc-7fX"/>
+                                <include reference="tEO-nW-4j6"/>
                             </mask>
                         </variation>
                     </view>

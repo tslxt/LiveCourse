@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -19,20 +20,44 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="initial.png" translatesAutoresizingMaskIntoConstraints="NO" id="f8P-HK-jfF">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="0.0" y="-33" width="375" height="700"/>
                                 </variation>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="f8P-HK-jfF" secondAttribute="trailing" id="SBR-iY-qWp">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-20"/>
+                            </constraint>
+                            <constraint firstItem="f8P-HK-jfF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="Udl-pL-bf4">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-33"/>
+                            </constraint>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="f8P-HK-jfF" secondAttribute="bottom" id="ccB-ta-a0D"/>
+                            <constraint firstItem="f8P-HK-jfF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="n5a-pV-2Hr">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-20"/>
+                            </constraint>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="f8P-HK-jfF"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="SBR-iY-qWp"/>
+                                <exclude reference="Udl-pL-bf4"/>
+                                <exclude reference="n5a-pV-2Hr"/>
+                                <exclude reference="ccB-ta-a0D"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="f8P-HK-jfF"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="SBR-iY-qWp"/>
+                                <include reference="Udl-pL-bf4"/>
+                                <include reference="n5a-pV-2Hr"/>
+                                <include reference="ccB-ta-a0D"/>
                             </mask>
                         </variation>
                     </view>
